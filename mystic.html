@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex1</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;0,6..96,800;0,6..96,900;1,6..96,400;1,6..96,500;1,6..96,600;1,6..96,700;1,6..96,800;1,6..96,900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <div id="cursor-inner"><img width="25px" src="star-cursor.png" alt=""></div>
+        <div id="cursor-outer"></div>
+    </div>
+
+    <div id="window">
+        <button onclick="topFunction()" id="top-button" title="Go to top">
+            <img src="up arrow.png" height="17px" alt="">
+        </button>
+    </div>
+
+    <header>
+        <menu>
+            <a href="#">
+                <img src="mystic-02-02.png" alt="">
+            </a>
+            <nav>
+                <div class="header-item">
+                    <a href="#about">about</a>
+                </div>
+                <div class="header-item">
+                    <a href="#products">products</a>
+                </div>
+                <div class="header-item">
+                    <a href="#contacts">contacts</a>
+                </div>
+            </nav>
+        </menu>
+        <div class="progress-container">
+            <div class="progress-bar" id="prog"></div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <section id="homepage">
+        </section>
+
+        <section id="about">
+            <div id="about-title">
+                <h1>about</h1>
+                <img id="about-image" width="300px" src="Web 1920 – 5.png" alt="">
+            </div>
+        </section>
+
+        <section id="products">
+            <h1>products</h1>
+
+            <nav>
+                <a class="buttons" href="">all</a>
+                <a class="buttons" href="">candles</a>
+                <a class="buttons" href="">crystals</a>
+                <a class="buttons" href="">bones</a>
+                <a class="buttons" href="">jewelry</a>
+                <a class="buttons" href="">sage</a>
+            </nav>
+
+            <div>
+                <div class="products-row">
+                    <div class="products-item"></div>
+                    <div class="products-item"></div>
+                    <div class="products-item"></div>
+                </div>
+                <div class="products-row">
+                    <div class="products-item"></div>
+                    <div class="products-item"></div>
+                    <div class="products-item"></div>
+                </div>
+                <div class="products-row">
+                    <div class="products-item"></div>
+                    <div class="products-item"></div>
+                    <div class="products-item"></div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="shape">
+            <div id="shape-container">
+                <div id="line"></div>
+                <img class="star-big" width="100px" src="star-big.png" alt="">
+                <img class="star-small" style="left: 0;" id="left" width="50px" src="star-small.png" alt="">
+                <img class="star-small" style="right: 0;" width="50px" src="star-small.png" alt="">
+            </div>
+        </div>
+
+        <section id="contacts">
+            <h1>contacts</h1>
+
+            <div class="container">
+                <img width="300px" src="mystic-03.png" alt="">
+                <div>
+                    <div>
+                        <h3>adress</h3>
+                        <p>aaaa</p>
+                    </div>
+
+                    <div>
+                        <h3>telephone</h3>
+                        <p>aaaa</p>
+                    </div>
+
+                    <div>
+                        <h3>e-mail</h3>
+                        <p>aaaa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div id="social-midia-container">
+                <div class="social-midia-item">
+                    <img src="social midia icon-02.png" alt="">
+                </div>
+                <div class="social-midia-item">
+                    <img src="social midia icon-04.png" alt="">
+                </div>
+                <div class="social-midia-item">
+                    <img src="social midia icon-06.png" alt="">
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+
+<script>
+    window.onscroll = function () { progressBar(), scrollFunction() };
+
+    function progressBar() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("prog").style.width = scrolled + "%";
+    }
+
+
+
+    var mybutton = document.getElementById("top-button");
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+
+    var cursorinner = document.querySelector('#cursor-inner');
+    document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        cursorinner.style.left = x + 'px';
+        cursorinner.style.top = y + 'px';
+    });
+
+    var cursorouter = document.querySelector('#cursor-outer');
+    document.addEventListener('mousemove', function (e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        cursorouter.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+    });
+
+    var a = document.querySelectorAll('a');
+    var smi = document.querySelectorAll('.social-midia-item');
+    var bt = document.querySelectorAll('button');
+
+    a.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            cursorinner.classList.add('hover');
+            cursorouter.classList.add('hover');
+        });
+        item.addEventListener('mouseleave', () => {
+            cursorinner.classList.remove('hover');
+            cursorouter.classList.remove('hover');
+        });
+    })
+    smi.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            cursorinner.classList.add('hover');
+            cursorouter.classList.add('hover');
+        });
+        item.addEventListener('mouseleave', () => {
+            cursorinner.classList.remove('hover');
+            cursorouter.classList.remove('hover');
+        });
+    })
+    bt.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            cursorinner.classList.add('hover');
+            cursorouter.classList.add('hover');
+        });
+        item.addEventListener('mouseleave', () => {
+            cursorinner.classList.remove('hover');
+            cursorouter.classList.remove('hover');
+        });
+    })
+
+
+</script>
+
+</html>
