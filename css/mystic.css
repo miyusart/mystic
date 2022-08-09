@@ -73,9 +73,12 @@ body {
 /*---------------BODY--------------------------------------------------------*/
 #cursor-inner {
     z-index: 4;
+    width: 5px;
+    height: 5px;
+    background-color: var(--color3);
+    border-radius: 100%;
     position: fixed;
     pointer-events: none;
-    background-blend-mode: color-burn;
     transform: translate(-50%, -40%);
 }
 
@@ -216,15 +219,16 @@ header nav a:hover {
 
 /*---------------MAIN--------------------------------------------------------*/
 main {
-    padding: 120px 0 85px 0;
+    padding: 120px 0 0;
 }
 
-section:not(#products, #contacts) {
+section {
+    margin-top: -125px;
+    padding-top: 125px;
+}
+
+section:not(#products) {
     height: calc(100vh - 120px);
-}
-
-#contacts {
-    height: calc(100vh - 205px);
 }
 
 
@@ -341,6 +345,7 @@ h1 {
     text-align: center;
     width: 100%;
     height: 100px;
+    margin: 100px 0 250px 0;
 }
 
 #shape-container {
@@ -372,6 +377,19 @@ h1 {
 /*---------------CONTACTS--------------------------------------------------------*/
 #contacts {
     background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#main-container-contacts {
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    bottom: -1px;
+    border: var(--color4) solid 1px;
+    display: flex;
+    justify-content: center;
 }
 
 #contacts h1 {
@@ -382,8 +400,19 @@ h1 {
     position: relative;
     display: flex;
     justify-content: center;
-    bottom: 80px;
+    align-items: center;
+    width: 360px;
+    height: 400px;
     position: absolute;
+    text-align: center;
+}
+
+.contacts-info {
+    width: 250px;
+    height: 40px;
+    border: var(--color4) solid 1px;
+    border-radius: 50px;
+    margin: 20px 0;
 }
 
 
@@ -392,7 +421,6 @@ h1 {
 footer {
     background-color: var(--color2);
     position: absolute;
-    bottom: 0px;
     height: 85px;
     width: 100%;
     display: flex;
