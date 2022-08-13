@@ -4,7 +4,7 @@
     padding: 0px;
     font-family: 'Blosvet', serif;
     text-decoration: none;
-    cursor: none;
+    /*cursor: none;*/
 }
 
 a,
@@ -31,12 +31,12 @@ img {
 
 
 
-#cursor-inner, #cursor-outer {
+/*#cursor-inner, #cursor-outer {
     z-index: 4;
     position: fixed;
     pointer-events: none;
     transform: translate(-50%, -40%);
-}
+}*/
 
 
 
