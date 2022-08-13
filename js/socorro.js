@@ -45,14 +45,34 @@ var cursorouter = document.querySelector('#cursor-outer');
 document.addEventListener('mousemove', function (e) {
     var x = e.clientX;
     var y = e.clientY;
-    cursorouter.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+    cursorouter.style.left = x + 'px';
+    cursorouter.style.top = y + 'px';
 });
+
+
+/*var cursorouter = document.querySelector('#cursor-outer');
+document.addEventListener('mousemove', function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursorouter.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});*/
 
 var a = document.querySelectorAll('a');
 var smi = document.querySelectorAll('.social-midia-item');
 var bt = document.querySelectorAll('button');
 
 a.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        cursorinner.style.display = "none";
+        cursorouter.style.display = "block";
+    });
+    item.addEventListener('mouseleave', () => {
+        cursorinner.style.display = "block";
+        cursorouter.style.display = "none";
+    });
+})
+
+/*a.forEach(item => {
     item.addEventListener('mouseover', () => {
         cursorinner.classList.add('hover');
         cursorouter.classList.add('hover');
@@ -81,4 +101,4 @@ bt.forEach(item => {
         cursorinner.classList.remove('hover');
         cursorouter.classList.remove('hover');
     });
-})
+})*/
