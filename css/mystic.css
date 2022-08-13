@@ -173,48 +173,33 @@ header nav a:hover {
 
 
 /*---------------TOP BUTTON--------------------------------------------------------*/
-#window {
-    width: 100vw;
-    height: 100vh;
-    z-index: 2;
-    position: absolute;
-}
-
 #top-button {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    background-color: var(--color4);
-    border: 1px var(--color1) solid;
+    border: #52454F solid 1px;
+    position: fixed;
+    width: 45px;
+    height: 45px;
     bottom: 25px;
     right: 30px;
-    position: fixed;
-    padding: 5px;
-}
-
-#top-button:hover {
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    bottom: 28px;
-    right: 28px;
-}
-
-#top-button img,
-#top-button {
-    transition: all 0.25s ease-in-out;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #top-button img {
-    opacity: 0.75;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px var(--color1) solid;
+    transition: all 0.5s cubic-bezier(0.38,-0.68, 0.32, 2.16);
+
 }
 
-#top-button:hover img {
-    background-color: var(--color4);
-    height: 20px;
-    opacity: 1;
+#top-button img:hover {
+    width: 45px;
+    height: 45px;
+    border: var(--color1) 2px solid;
 }
-
 
 
 /*---------------MAIN--------------------------------------------------------*/
@@ -341,6 +326,7 @@ h1 {
 
 
 
+/*---------------SHAPE--------------------------------------------------------*/
 #shape {
     text-align: center;
     width: 100%;
@@ -429,15 +415,15 @@ footer {
 }
 
 #social-midia-container {
-    width: 130px;
+    width: 150px;
     height: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .social-midia-item {
-    width: 35px;
-    height: 35px;
+    width: 55px;
+    height: 55px;
     margin: auto;
     position: relative;
     transition: all 0.25s ease-in-out;
@@ -447,17 +433,17 @@ footer {
 }
 
 .social-midia-item img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     text-align: center;
     border: var(--color1) 0px solid;
     border-radius: 50px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s cubic-bezier(0.38,-0.68, 0.32, 2.16);
 }
 
 .social-midia-item img:hover {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border: var(--color1) 2px solid;
 }

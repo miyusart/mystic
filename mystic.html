@@ -24,14 +24,27 @@
         <div id="cursor-outer"></div>
     </div>
 
-    <div id="window">
-        <button onclick="topFunction()" id="top-button" title="Go to top">
-            <img src="images/up arrow.png" height="17px" alt="">
-        </button>
-    </div>
+    <button id="top-button">
+        <img src="images/mystic-icon-up.svg" height="17px" alt="">
+    </button>
 
     <header>
-        <menu>
+        <        <menu>
+            <a href="#">
+                <img src="images/mystic-02-02.png" alt="">
+            </a>
+            <nav>
+                <div class="header-item">
+                    <a href="#about">about</a>
+                </div>
+                <div class="header-item">
+                    <a href="#products">products</a>
+                </div>
+                <div class="header-item">
+                    <a href="#contacts">contacts</a>
+                </div>
+            </nav>
+        </menu>>
             <a href="#">
                 <img src="images/mystic-02-02.png" alt="">
             </a>
@@ -57,7 +70,7 @@
     <main>
         <section id="homepage">
             <div id="homepage-container">
-                <img src="images/mystic-03.png" alt="">
+                <!--<img src="images/mystic-03.png" alt="">-->
             </div>
         </section>
 
@@ -116,24 +129,7 @@
         </div>
 
         <section id="contacts">
-            <div id="main-container-contacts">
                 <h1>contacts</h1>
-                <div class="container">
-                    <div>
-                        <div class="contacts-info">
-                            <p>aaaa</p>
-                        </div>
-
-                        <div class="contacts-info">
-                            <p>aaaa</p>
-                        </div>
-
-                        <div class="contacts-info">
-                            <p>aaaa</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -153,86 +149,6 @@
 </body>
 
 
-<script>
-    window.onscroll = function () { progressBar(), scrollFunction() };
-
-    function progressBar() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("prog").style.width = scrolled + "%";
-    }
-
-
-
-    var mybutton = document.getElementById("top-button");
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    }
-
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
-
-
-    var cursorinner = document.querySelector('#cursor-inner');
-    document.addEventListener('mousemove', function (e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        cursorinner.style.left = x + 'px';
-        cursorinner.style.top = y + 'px';
-    });
-
-    var cursorouter = document.querySelector('#cursor-outer');
-    document.addEventListener('mousemove', function (e) {
-        var x = e.clientX;
-        var y = e.clientY;
-        cursorouter.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-    });
-
-    var a = document.querySelectorAll('a');
-    var smi = document.querySelectorAll('.social-midia-item');
-    var bt = document.querySelectorAll('button');
-
-    a.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            cursorinner.classList.add('hover');
-            cursorouter.classList.add('hover');
-        });
-        item.addEventListener('mouseleave', () => {
-            cursorinner.classList.remove('hover');
-            cursorouter.classList.remove('hover');
-        });
-    })
-    smi.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            cursorinner.classList.add('hover');
-            cursorouter.classList.add('hover');
-        });
-        item.addEventListener('mouseleave', () => {
-            cursorinner.classList.remove('hover');
-            cursorouter.classList.remove('hover');
-        });
-    })
-    bt.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            cursorinner.classList.add('hover');
-            cursorouter.classList.add('hover');
-        });
-        item.addEventListener('mouseleave', () => {
-            cursorinner.classList.remove('hover');
-            cursorouter.classList.remove('hover');
-        });
-    })
-
-
-</script>
+<script src="js/mystic.js"></script>
 
 </html>
