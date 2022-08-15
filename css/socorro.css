@@ -61,13 +61,14 @@ img {
     width: 35px;
     height: 35px;
     transition: all 0.30s cubic-bezier(0.38, -0.68, 0.32, 2.16);
-    border: var(--color1) solid 2px;
+    border-color: var(--color1);
     border-radius: 50px;
 }
 
 #top-button img:hover {
     width: 40px;
     height: 40px;
+    border: var(--color1) solid 2px;
 }
 
 
@@ -156,22 +157,42 @@ h1 {
     text-align: center;
     font-size: 350%;
     color: var(--color4);
+    padding-top: 25px;
 }
 
 
 
 /*---------------------------------------sections---------------------------------------*/
 #about {
-    background: var(--color3);
+    background: var(--color2);
     padding-top: 0px;
 }
+
+#about div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#about img {
+    width: 200px;
+}
+
+#about h1 {
+    position: absolute;
+    width: 200px;
+    top: 55px;
+}
+
 
 
 #shape {
     text-align: center;
     width: 100%;
     height: 100px;
-    margin: 50px 0;
+    margin: 25px 0;
 }
 
 #shape-container {
@@ -198,6 +219,66 @@ h1 {
     position: absolute;
     transform: translateY(24.75px);
 }
+
+
+
+#contacts .contacts-main-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts-main-container img {
+    height: 100%;
+}
+
+.contacts-main-container h1 {
+    position: absolute;
+    top: 55px;
+}
+
+#contacts-container {
+    position: absolute;
+    width: 300px;
+    height: min-content;
+    bottom: 115px;
+}
+
+.contacts-sub-container {
+    position: relative;
+    height: 75px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.contacts-sub-container:first-child {
+    margin-top: 0;
+}
+
+.contacts-sub-container img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.contacts-sub-container div {
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 0;
+    border: var(--color3) solid 1px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-sub-container div a {
+    margin-top: 10px;
+}
+
 
 
 /*---------------------------------------footer---------------------------------------*/
@@ -258,4 +339,4 @@ html {
     background-color: var(--color4);
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
-} 
+}

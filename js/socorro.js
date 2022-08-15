@@ -33,7 +33,7 @@ function goToTopFunction() {
 
 
 /*---------------------------------------cursor---------------------------------------*/
-var cursorinner = document.querySelector('#cursor-inner');
+/*var cursorinner = document.querySelector('#cursor-inner');
 document.addEventListener('mousemove', function (e) {
     var x = e.clientX;
     var y = e.clientY;
@@ -57,7 +57,7 @@ document.addEventListener('mousemove', function (e) {
     cursorouter.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
 });*/
 
-var a = document.querySelectorAll('a');
+/*var a = document.querySelectorAll('a');
 var smi = document.querySelectorAll('.social-midia-item');
 var bt = document.querySelectorAll('button');
 
